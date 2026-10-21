@@ -80,3 +80,14 @@ header nav,.nav-cta {font-size:var(--type-support);line-height:1.5}
 .team-members {grid-template-columns:minmax(0,1fr)}
 .team-members article {max-width:52ch}
 .verified-comment figcaption {overflow-wrap:anywhere}
+
+.testimonial-video{margin-bottom:28px;max-width:540px;min-width:0}
+.testimonial-video h3{font-size:24px;line-height:1.4;font-weight:500}
+.testimonial-video>p{font-size:14px;margin:8px 0 18px}
+.instagram-player{padding:22px;background:#e7e9dc;border:1px solid var(--line);border-radius:12px;min-width:0}
+.instagram-player .video-notice{font-size:12px;line-height:1.7;margin:14px 0 0}
+.instagram-mount{max-width:100%;overflow:hidden}
+.instagram-mount:not(:empty){margin-top:16px}
+.instagram-mount .instagram-media,.instagram-mount iframe{min-width:0!important;max-width:100%!important;width:100%!important;margin:0!important}
+.testimonial-video .text-link{margin-top:12px}
+@media(max-width:700px){.instagram-player{padding:10px}.testimonial-video{max-width:100%}.testimonial-video h3{font-size:22px}}
