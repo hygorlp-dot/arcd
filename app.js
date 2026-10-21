@@ -32,4 +32,3 @@ function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expand
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus();}});
 document.addEventListener('click',event=>{if(!event.target.closest('header'))closeMenu();});
 matchMedia('(min-width:701px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
-
