@@ -75,3 +75,8 @@ header nav,.nav-cta {font-size:var(--type-support);line-height:1.5}
   .image-disclosure {bottom:14px}
 }
 .dialog-copy .eyebrow,.hero .vertical {font-size:.6875rem;line-height:1.6;letter-spacing:.1em}
+
+/* Keep the verified professional bio readable within the existing team area. */
+.team-members {grid-template-columns:minmax(0,1fr)}
+.team-members article {max-width:52ch}
+.verified-comment figcaption {overflow-wrap:anywhere}
