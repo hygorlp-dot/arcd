@@ -21,3 +21,65 @@ header :focus-visible,.hero :focus-visible,.solutions :focus-visible{outline-col
 @media(min-width:701px){.hero .photo-caption{bottom:110px}}
 
 .contact :is(input,select,textarea):focus-visible{outline:2px solid #8b906b;outline-offset:4px}
+
+/* Editorial refinement: keep the original palette and composition. */
+.hero-line-final{font-size:.72em;letter-spacing:-.035em;line-height:1.25}
+.hero-bottom p{font-size:14px;line-height:1.8}
+.credentials .credential-link{display:block;padding:10px 0;min-height:64px}
+.credentials .credential-link:hover strong{color:#667147}
+.credentials strong{transition:color .2s}
+.credentials small{font-size:12px}
+.material-band{padding-block:24px}
+.about{padding-bottom:100px}
+.portfolio{margin-top:40px}
+.project-info{align-items:flex-start}
+.project-info>span{font-size:12px;line-height:1.6;max-width:230px}
+.places .places-note{font-family:'DM Sans',sans-serif;font-size:13px;max-width:600px;margin-top:14px}
+.about p,.service p,.journey p,.testimonial p,.contact p,.faq details p{font-size:14px;line-height:1.8}
+.faq summary{font-size:14px;line-height:1.6;min-height:44px;align-items:center}
+.review-invitation p{font-size:14px}
+.build-description{font-size:13px;min-height:75px}
+.build-disclosure p{font-size:12px}
+.build-timeline label{font-size:11px}
+.build-play{font-size:12px;min-height:44px}
+.build-timeline input{min-height:32px}
+.contact .field-help{margin:-14px 0 24px;font-size:12px;line-height:1.6}
+.contact label{font-size:13px}
+.contact .consent{font-size:12px;min-height:44px;align-items:flex-start}
+.contact input:not([type=checkbox]),.contact select,.contact textarea{font-size:16px}
+.contact form>small:not(.field-help){font-size:12px}
+.contact select{background-color:#faf9f2;color:#20231e}
+.contact .instagram{font-size:13px;padding-block:12px}
+.project-facts{margin:24px 0 0;border-top:1px solid var(--line)}
+.project-facts>div{padding:12px 0;border-bottom:1px solid var(--line)}
+.project-facts dt{font-size:11px;color:var(--muted);margin-bottom:4px}
+.project-facts dd{margin:0;font-size:13px;line-height:1.5}
+.dialog-copy .button{white-space:normal;line-height:1.5}
+dialog{overscroll-behavior:contain}
+body:has(dialog[open]){overflow:hidden}
+a,button,summary{touch-action:manipulation}
+.floating{bottom:max(22px,env(safe-area-inset-bottom));right:max(20px,env(safe-area-inset-right))}
+.footer-bottom button{min-height:44px;min-width:64px}
+.floating.form-visible{opacity:0;visibility:hidden;pointer-events:none}
+@media(max-width:700px){
+ .hero-line-final{font-size:.66em;letter-spacing:-.035em}
+ .hero-bottom p{font-size:13px}
+ .credentials .credential-link{padding-block:8px}
+ .credentials>div>strong,.credentials strong{font-size:24px}
+ .credentials small{font-size:11px}
+ .material-band{padding-block:20px;gap:20px;font-size:16px}
+ .about{padding-bottom:65px}
+ .portfolio{margin-top:0}
+ .project-info>span{font-size:12px;max-width:none}
+ .build-disclosure p{font-size:12px}
+ .build-description{font-size:13px;min-height:65px}
+ .build-timeline label{font-size:11px}
+ .build-steps button{min-height:44px}
+ #project-dialog{max-height:88dvh}
+ #dialog-image{min-height:0;height:220px;max-height:32dvh}
+ .dialog-copy{padding:30px 24px}
+ .dialog-copy h2{font-size:29px}
+ .close{position:sticky;top:10px;margin:10px 10px -54px auto;grid-column:1/-1;justify-self:end;right:auto}
+ .contact{padding-top:80px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}

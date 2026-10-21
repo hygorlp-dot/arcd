@@ -3,14 +3,14 @@
   const ease = 'cubic-bezier(.22,1,.36,1)';
   const animate = (element, frames, options = {}) => {
     if (!element || reduced.matches || !element.animate) return;
-    return element.animate(frames, {duration: 950, easing: ease, fill: 'backwards', ...options});
+    return element.animate(frames, {duration: 450, easing: ease, fill: 'backwards', ...options});
   };
   document.querySelectorAll('.hero-line>span').forEach((line, index) => {
-    animate(line, [{transform:'translateY(110%)', opacity:0}, {transform:'translateY(0)',opacity:1}], {delay:250 + index * 150, duration:1300});
+    animate(line, [{transform:'translateY(110%)', opacity:0}, {transform:'translateY(0)',opacity:1}], {delay:80 + index * 70, duration:650});
   });
   animate(document.querySelector('.hero .eyebrow'), [{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}], {delay:150});
-  animate(document.querySelector('.hero-bottom'), [{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}], {delay:750});
-  animate(document.querySelector('.hero-seal'), [{opacity:0,transform:'rotate(-15deg) scale(.85)'},{opacity:1,transform:'rotate(10deg) scale(1)'}], {delay:900,duration:1500});
+  animate(document.querySelector('.hero-bottom'), [{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}], {delay:200});
+  animate(document.querySelector('.hero-seal'), [{opacity:0,transform:'rotate(-15deg) scale(.85)'},{opacity:1,transform:'rotate(10deg) scale(1)'}], {delay:250,duration:650});
 
   // Finite, one-time reveals leave the document readable without JavaScript.
   const revealTargets = new Map();
@@ -24,10 +24,10 @@
       const el = entry.target;
       observer.unobserve(el);
       const kind = revealTargets.get(el);
-      if (kind === 'heading') animate(el,[{opacity:0,transform:'translateY(30px)',clipPath:'inset(0 0 85% 0)'},{opacity:1,transform:'translateY(0)',clipPath:'inset(0 0 0 0)'}],{duration:1100});
-      if (kind === 'media') animate(el,[{opacity:.2,translate:'0 45px',scale:'.96'},{opacity:1,translate:'0 0',scale:'1'}],{duration:1200});
-      if (kind === 'line') animate(el,[{opacity:.2,transform:'translateY(22px)'},{opacity:1,transform:'translateY(0)'}],{duration:850});
-      if (kind === 'form') animate(el,[{opacity:.4,transform:'translateY(30px)'},{opacity:1,transform:'translateY(0)'}],{duration:1100});
+      if (kind === 'heading') animate(el,[{opacity:0,transform:'translateY(30px)'},{opacity:1,transform:'translateY(0)'}],{duration:500});
+      if (kind === 'media') animate(el,[{opacity:.2,translate:'0 45px',scale:'.96'},{opacity:1,translate:'0 0',scale:'1'}],{duration:600});
+      if (kind === 'line') animate(el,[{opacity:.2,transform:'translateY(22px)'},{opacity:1,transform:'translateY(0)'}],{duration:200});
+      if (kind === 'form') animate(el,[{opacity:.4,transform:'translateY(30px)'},{opacity:1,transform:'translateY(0)'}],{duration:500});
     }
   }, {threshold:.12,rootMargin:'0px 0px -25px 0px'});
   revealTargets.forEach((kind, el) => {if(el) observer.observe(el)});
@@ -64,13 +64,13 @@
   const grid=document.querySelector('.projects');
   document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
     grid.classList.toggle('is-filtered',button.dataset.filter!=='todos');
-    grid.querySelectorAll('.project:not([hidden])').forEach((project,index)=>animate(project,[{opacity:.1,translate:'0 18px'},{opacity:1,translate:'0 0'}],{duration:650,delay:index*80}));
+    grid.querySelectorAll('.project:not([hidden])').forEach((project,index)=>animate(project,[{opacity:.1,translate:'0 18px'},{opacity:1,translate:'0 0'}],{duration:250,delay:index*40}));
     measure();
   }));
   document.querySelectorAll('[data-project]').forEach(button=>button.addEventListener('click',()=>{
-    animate(document.querySelector('#project-dialog'),[{opacity:0,transform:'translateY(25px) scale(.97)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:500});
+    animate(document.querySelector('#project-dialog'),[{opacity:0,transform:'translateY(25px) scale(.97)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:250});
   }));
   document.querySelectorAll('details').forEach(details=>details.addEventListener('toggle',()=>{
-    if(details.open)animate(details.querySelector('p'),[{opacity:0,transform:'translateY(-8px)'},{opacity:1,transform:'translateY(0)'}],{duration:400});
+    if(details.open)animate(details.querySelector('p'),[{opacity:0,transform:'translateY(-8px)'},{opacity:1,transform:'translateY(0)'}],{duration:200});
   }));
 })();

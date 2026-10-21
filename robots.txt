@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://arcd-construtech.vercel.app/sitemap.xml
