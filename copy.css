@@ -102,3 +102,12 @@ a,button,summary{touch-action:manipulation}
 .verified-comment .text-link{margin-top:8px;min-height:44px;align-items:center}
 .places-note a,.build-disclosure p a{text-decoration:underline;text-underline-offset:4px;display:inline-block;padding-block:8px}
 .footer-bottom>span{line-height:1.8}
+
+.team-members{grid-template-columns:1fr}
+.service p strong{display:block;color:var(--paper);font-weight:500;margin-bottom:8px}
+.service-next{display:block;margin-top:12px;font-size:12px;color:#c7cbbb}
+.service-sources{margin:24px 0;font-size:12px!important;line-height:1.9}
+.service-sources a{display:inline-block;text-decoration:underline;text-underline-offset:4px;padding-block:8px}
+.case-story{border-top:1px solid var(--line);margin-top:24px;padding-top:22px}
+.case-story h3{font-size:15px;line-height:1.5;font-weight:600;margin-bottom:8px}
+.case-story p{font-size:13px;line-height:1.8;margin-bottom:22px}
