@@ -79,7 +79,7 @@ a,button,summary{touch-action:manipulation}
  #dialog-image{min-height:0;height:220px;max-height:32dvh}
  .dialog-copy{padding:30px 24px}
  .dialog-copy h2{font-size:29px}
- .close{position:sticky;top:10px;margin:10px 10px -54px auto;grid-column:1/-1;justify-self:end;right:auto}
+ .close{display:block;position:sticky;top:10px;margin:10px 10px -54px auto;grid-column:1/-1;justify-self:end;right:auto}
  .contact{padding-top:80px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
