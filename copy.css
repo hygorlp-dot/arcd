@@ -95,3 +95,10 @@ a,button,summary{touch-action:manipulation}
 .contact-location p{margin-top:12px;font-size:13px}.contact-location small{display:block;font-size:11px;line-height:1.7;color:var(--muted);margin-top:14px;max-width:390px}
 .contact-location .text-link{min-height:44px;align-items:center;margin-top:10px}
 @media(max-width:700px){.team-members{grid-template-columns:1fr;gap:20px}.image-disclosure{font-size:10px;bottom:12px;left:16px;right:16px}.testimonial h2{font-size:30px}}
+
+.verified-comment{margin:0 0 30px;padding:0 0 24px;border-bottom:1px solid var(--line)}
+.verified-comment blockquote{margin:0 0 14px;font-family:Georgia,serif;font-size:26px;line-height:1.4;color:var(--ink)}
+.verified-comment figcaption{font-size:12px;line-height:1.7;color:var(--muted)}
+.verified-comment .text-link{margin-top:8px;min-height:44px;align-items:center}
+.places-note a,.build-disclosure p a{text-decoration:underline;text-underline-offset:4px;display:inline-block;padding-block:8px}
+.footer-bottom>span{line-height:1.8}
