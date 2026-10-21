@@ -1,1 +1,21 @@
 .credentials>div>strong{font-size:clamp(24px,3vw,40px);letter-spacing:-1px}.review-board-live{grid-template-columns:1fr 1fr;align-items:start}.review-invitation h3{font-size:20px;margin-bottom:12px}.review-invitation p{font-size:14px;line-height:1.8;max-width:440px}.review-invitation .text-link{margin-top:20px}@media(max-width:700px){.review-board-live{grid-template-columns:1fr}.credentials>div>strong{font-size:27px}}
+
+/* Keep anchors and validation targets clear of the floating header. */
+html{scroll-padding-top:110px}
+input,select,textarea{scroll-margin-block:120px}
+.menu,.close,.filters button,.gallery-buttons button{min-width:44px;min-height:44px}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #8b906b;outline-offset:5px}
+header :focus-visible,.hero :focus-visible,.solutions :focus-visible{outline-color:#e6dc60}
+#form-status .text-link{max-width:100%;white-space:normal;line-height:1.6}
+@media(max-width:700px){
+  input:not([type=checkbox]),select,textarea{font-size:16px}
+  .contact .consent{font-size:12px;gap:10px}
+  .consent input{width:20px;height:20px;flex:none;margin-top:2px}
+  form>label{font-size:13px}form>small{font-size:11px}
+  .credentials{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .credentials>div{min-width:0;padding-left:14px}
+  .credentials small{line-height:1.6}
+  .hero .photo-caption{display:none}
+}
+
+@media(min-width:701px){.hero .photo-caption{bottom:110px}}
