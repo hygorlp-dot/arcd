@@ -37,8 +37,10 @@
   const heroImage = document.querySelector('.hero-photo img');
   const progress = document.querySelector('.page-progress');
   let pending = false;
-  let heroHeight = hero.offsetHeight;
-  let pageHeight = document.documentElement.scrollHeight - innerHeight;
+  // Layout is read only from the ResizeObserver callback (layout is already clean there),
+  // never synchronously at startup, to avoid forced reflows during page load.
+  let heroHeight = 0;
+  let pageHeight = 1;
   const measure = () => {heroHeight=hero.offsetHeight;pageHeight=document.documentElement.scrollHeight-innerHeight;queueUpdate()};
   let lastY = window.scrollY;
   const update = () => {
@@ -57,9 +59,7 @@
   function queueUpdate(){if(!pending){pending=true;requestAnimationFrame(update)}}
   window.addEventListener('scroll',queueUpdate,{passive:true});
   header.addEventListener('focusin',()=>header.classList.remove('is-tucked'));
-  window.addEventListener('resize',measure,{passive:true});
-  window.addEventListener('load',measure,{once:true});
-  document.fonts?.ready.then(measure);
+  window.addEventListener('resize',()=>requestAnimationFrame(measure),{passive:true});
   new ResizeObserver(measure).observe(document.querySelector('main'));
   reduced.addEventListener('change',()=>{if(reduced.matches)document.getAnimations().forEach(a=>{try{a.finish()}catch{a.cancel()}});queueUpdate()});
   update();
