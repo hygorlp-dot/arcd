@@ -40,16 +40,23 @@
   let heroHeight = hero.offsetHeight;
   let pageHeight = document.documentElement.scrollHeight - innerHeight;
   const measure = () => {heroHeight=hero.offsetHeight;pageHeight=document.documentElement.scrollHeight-innerHeight;queueUpdate()};
+  let lastY = window.scrollY;
   const update = () => {
     pending=false;
     const y=window.scrollY;
     header.classList.toggle('is-scrolled',y>180);
+    // Tuck the bar away while reading downward; bring it back on any upward scroll.
+    const keepVisible=header.contains(document.activeElement)||document.querySelector('#nav')?.classList.contains('open');
+    if (keepVisible || y<heroHeight || y<lastY-4) header.classList.remove('is-tucked');
+    else if (y>lastY+8) header.classList.add('is-tucked');
+    lastY=y;
     progress.style.transform=`scaleX(${Math.min(1,Math.max(0,y/Math.max(1,pageHeight)))})`;
     if (!reduced.matches && innerWidth>700 && y<heroHeight+100) heroImage.style.translate=`0 ${Math.min(y*.12,85)}px`;
     else heroImage.style.translate='0 0';
   };
   function queueUpdate(){if(!pending){pending=true;requestAnimationFrame(update)}}
   window.addEventListener('scroll',queueUpdate,{passive:true});
+  header.addEventListener('focusin',()=>header.classList.remove('is-tucked'));
   window.addEventListener('resize',measure,{passive:true});
   window.addEventListener('load',measure,{once:true});
   document.fonts?.ready.then(measure);

@@ -305,3 +305,16 @@ picture{display:contents}
 .notfound-links{display:flex;flex-wrap:wrap;gap:16px 30px;margin-top:20px}
 @media(max-width:700px){.case-page header{height:78px}.case-cta{padding:10px 14px;font-size:11px}.case-hero{grid-template-columns:1fr;gap:36px;padding:30px 0 50px}.case-photo img{max-height:520px}.case-facts{padding:50px 0}.case-story{padding-top:50px}}
 .team-links{display:flex;flex-wrap:wrap;gap:0 28px}
+
+/* ---- barra fixa compacta: menor ao rolar e recolhida enquanto o visitante desce a página ---- */
+header.is-scrolled{height:54px;top:8px;left:50%;width:min(94%,1180px);translate:-50% 0;border-radius:14px;padding:0 18px 0 14px;transition:translate .35s var(--ease),visibility .35s}
+header.is-scrolled .brand{gap:10px}
+header.is-scrolled .brand img{width:32px;height:32px}
+header.is-scrolled .brand>span{font-size:15px;letter-spacing:2.4px}
+header.is-scrolled .brand small{font-size:6px;margin-top:3px}
+header.is-scrolled nav{gap:26px}
+header.is-scrolled .nav-cta{padding:8px 14px;gap:14px;border-radius:10px}
+header.is-scrolled .nav-cta .icon-arrow{width:14px;height:14px}
+header.is-scrolled.is-tucked{translate:-50% calc(-100% - 12px);visibility:hidden;pointer-events:none}
+@media(max-width:700px){header.is-scrolled{height:52px;top:6px;width:calc(100% - 16px);padding:0 10px 0 12px}header.is-scrolled .menu{width:36px;height:36px;font-size:18px}header.is-scrolled nav{top:60px}}
+@media(prefers-reduced-motion:reduce){header.is-scrolled{transition:none}}
