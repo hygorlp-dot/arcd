@@ -1,0 +1,19 @@
+# ARCD Construtech
+
+> Arquitetura, engenharia e construção de residências de alto padrão em Caruaru, Pernambuco. A ARCD desenvolve projetos personalizados, executa e gerencia obras e apresenta residências prontas, como a Casa Supreme, no Terras Alpha.
+
+- Razão social: ARCD Construtech Ltda · CNPJ 27.259.760/0001-74
+- Endereço: Rua Quitéria Luiza da Silva Nova, nº 37, Universitário, Caruaru, PE
+- Horários: segunda, 10h às 17h; terça a sexta, 8h às 17h
+- Contato: (81) 99525-4340 (telefone e WhatsApp)
+- Sócio-administrador: Hygor Freitas
+
+## Páginas
+
+- [Início](https://arcd-construtech.vercel.app/): serviços, portfólio, etapas da obra, avaliações, dúvidas frequentes e contato
+- [Casa Supreme no Terras Alpha](https://arcd-construtech.vercel.app/projetos/casa-supreme): residência térrea com 3 quartos (2 suítes), pé-direito duplo, área gourmet integrada e piscina com hidromassagem
+
+## Perfis oficiais
+
+- [Instagram @arcdconstrutech](https://www.instagram.com/arcdconstrutech/)
+- [Perfil da Empresa no Google](https://www.google.com/maps?cid=8965470404311113653)

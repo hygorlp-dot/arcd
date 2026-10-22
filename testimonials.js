@@ -13,7 +13,7 @@ function loadInstagram(){
 }
 document.querySelectorAll('.load-testimonial').forEach(button=>button.addEventListener('click',async()=>{
   const player=button.closest('.instagram-player'),mount=player.querySelector('.instagram-mount'),notice=player.querySelector('.video-notice');
-  button.disabled=true;button.textContent='Carregando vídeo…';
+  button.disabled=true;button.removeAttribute('aria-label');button.textContent='Carregando vídeo…';
   const embed=document.createElement('blockquote');embed.className='instagram-media';
   embed.dataset.instgrmPermalink=player.dataset.instagramPost;embed.dataset.instgrmVersion='14';
   const link=document.createElement('a');link.href=player.dataset.instagramPost;link.textContent='Ver depoimento no Instagram';link.target='_blank';link.rel='noopener noreferrer';embed.append(link);mount.replaceChildren(embed);

@@ -34,7 +34,7 @@
 
   const header = document.querySelector('header');
   const hero = document.querySelector('.hero');
-  const heroImage = document.querySelector('.hero-photo>img');
+  const heroImage = document.querySelector('.hero-photo img');
   const progress = document.querySelector('.page-progress');
   let pending = false;
   let heroHeight = hero.offsetHeight;
