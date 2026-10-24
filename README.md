@@ -1,4 +1,6 @@
-# ARCD Construtech
+# MARCELL Engenharia & Construção
+
+Antes ARCD Construtech (a razão social continua ARCD Construtech Ltda). Identidade visual conforme o Manual de Identidade MARCELL, edição 04/2026.
 
 Site institucional estático, com visual preservado a partir de https://arcd-construtech.pages.dev/ e copy revisada em português.
 
@@ -15,7 +17,8 @@ Observação: o servidor do Python não aplica `cleanUrls`, `404.html` nem os he
 ## Estrutura
 
 - `index.html`: página inicial; `projetos/casa-supreme.html`: estudo de caso; `404.html`: página de erro.
-- `site.css`: folha única (antes eram 7 arquivos, mantidos na mesma ordem de cascata). Fontes DM Sans e Manrope auto-hospedadas em `assets/fonts/` (variáveis, subconjunto latin).
+- `site.css`: folha única (antes eram 7 arquivos, mantidos na mesma ordem de cascata). Paleta MARCELL nos tokens de `:root` (marinho `#0D1B2E`, ouro `#B9985B`, areia `#F3F0E9`, ardósia `#78818B`). Fontes Nimbus Sans (Regular/Bold) e P052 Itálico, da URW++ (licença AGPL com exceção de fonte, ver `assets/fonts/URW-LICENSE.txt`), auto-hospedadas em `assets/fonts/` (subconjunto latin, WOFF2).
+- `assets/brand/`: matrizes oficiais da marca (SVG do emblema e da marca completa em ouro e azul), logo do schema e avatar. Fundo escuro usa ouro; fundo claro usa azul (manual, p. 7).
 - `assets/img/`: versões AVIF/WebP das fotos. Os `.jpg` originais em `assets/` continuam como fallback e são usados pelo modal de projetos.
 - SEO: JSON-LD (`WebSite`, `GeneralContractor`, `WebPage`, `BreadcrumbList`), `sitemap.xml`, `robots.txt` e `llms.txt`. Não marcar avaliações com `Review`/`AggregateRating`: avaliações publicadas pela própria empresa não geram estrelas no Google.
 - `vercel.json`: CSP (permite o player do Instagram), `X-Frame-Options`, `Permissions-Policy` e cache de 7 dias em `/assets`.
